@@ -23,10 +23,22 @@ const car = {
 //});
 //console.log(Object.keys(car));
 //console.log(car.propertyIsEnumerable('year'));
-car.age = 2020;
-console.log(car.age);
+//car.age = 2020;
+//console.log(car.age);
 
 
+Object.defineProperty(window, 'globalVar', {
+    set: function(value){
+        console.log(value);
+        debugger;
+    }
+})
 
+function foo(){
+    globalVar = 10;
+}
+
+foo();
+console.log(globalVar);
 
 
