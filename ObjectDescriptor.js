@@ -5,13 +5,12 @@ const car = {
 }
 
 Object.defineProperty(car, 'year', {
-    configurable: false,
+    //configurable: false,
+    enumerable: false
 });
-console.log(car);
 
-delete car.year;
-console.log(car);
-
+console.log(Object.keys(car));
+console.log(car.propertyIsEnumerable('year'));
 
 
 
