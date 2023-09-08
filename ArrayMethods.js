@@ -87,20 +87,61 @@ users.forEach((user, index) => {
 */
 
 // filter
-
+/*
 const usersLess30 = users.filter((user) => {
    return user.age < 30 && user.isActive == true;
 })
 console.log(usersLess30);
+*/
 
+// map
+/*
+const usersName = users.map((user) => {
+    return ({name: user.name, age: user.age})
+})
+console.log(usersName);
+*/
 
+// Reduce
+/*
+const totalBalance = users.reduce((acc, user) =>{
+    console.log(acc);
+    return acc += user.balance;
+}, 0);
 
+const usersObj = users.reduce((acc, user) => {
+     acc[user._id] = user;
+     return acc
+}, {})
+console.log(usersObj);
+*/
 
+// Find
+/*
+const user = users.find((user) =>{
+  return user.name === 'Valencia Carrillo';
+})
+console.log(user);
+*/
 
+// Sort
+/*
+const nameArr = ['Bill', 'Ann', 'Alice', 'John', 'Edward', 'Dima'];
+nameArr.sort();
+console.log(nameArr);
+*/
+/*
+const numArr = [10, 3, 45, 18, 1, 36, 12, 8];
+numArr.sort((prev, next) => {
+  console.log(prev, next)
+});
+//console.log(numArr);
+*/
 
-
-
-
+users.sort((prevUser, nextUser) => {
+  return prevUser.age - nextUser.age
+})
+console.log(users);
 
 
 
