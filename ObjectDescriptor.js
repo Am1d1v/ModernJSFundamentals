@@ -27,6 +27,7 @@ const car = {
 //console.log(car.age);
 
 
+/*
 Object.defineProperty(window, 'globalVar', {
     set: function(value){
         console.log(value);
@@ -40,5 +41,6 @@ function foo(){
 
 foo();
 console.log(globalVar);
+*/
 
 
