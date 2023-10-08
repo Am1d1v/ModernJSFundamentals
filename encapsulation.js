@@ -15,6 +15,7 @@ const User = {
 }
 */
 
+/*
 function User(name){
     let username = name;
 
@@ -29,6 +30,29 @@ function User(name){
         }
 
     }
+}
+
+const Dima = new User('Dima');
+*/
+
+// Object.freeze()
+
+function User(name){
+    let username = name;
+
+    return Object.freeze(
+        {
+
+            getName(){
+                return username;    
+            },
+    
+            setName(name){ 
+                username = name;
+            }
+    
+        }
+    )
 }
 
 const Dima = new User('Dima');
